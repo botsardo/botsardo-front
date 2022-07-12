@@ -1,5 +1,5 @@
 import Head from 'next/head';
-const asd = 123;
+
 export default function Home() {
     return (
         <div>
