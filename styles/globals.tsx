@@ -1,3 +1,9 @@
-// export const fonts = {
-//     base: "system-iu, -apple-system,\nBlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
-//   };
+export const colors = {
+    white: '#f7f7f7',
+    blue: '#203B64F3',
+    ocean: '#1A858C',
+};
+
+export const fonts = {
+    lato: "'lato', sans-serif",
+};
