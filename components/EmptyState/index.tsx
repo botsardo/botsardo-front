@@ -4,7 +4,13 @@ import { colors } from 'styles/globals';
 import Button from 'components/Button';
 
 export default function EmptyState() {
-    const buttonProps = { text: '¡Comenzá!', color: colors.ocean };
+    const buttonProps = {
+        label: '¡Comenzá!',
+        color: colors.ocean,
+        onClick: () => {
+            console.log('hola');
+        },
+    };
 
     return (
         <>

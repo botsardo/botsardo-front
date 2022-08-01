@@ -9,7 +9,8 @@
     "lint": "next lint . --ext .tsx",
     "prettier-format": "prettier --config .prettierrc 'pages/*.tsx' --write",
     "prepare": "husky install",
-    "test": "jest --watch"
+    "test": "jest --config jest.config.ts",
+    "test-watch": "jest --watch"
   },
   "dependencies": {
     "next": "12.2.3",

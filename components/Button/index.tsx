@@ -1,23 +1,31 @@
+import { MouseEventHandler } from 'react';
 import { colors } from 'styles/globals';
 
 interface ButtonProps {
-    text: string;
+    label: string;
     color: string;
     width?: number;
     height?: number;
     textColor?: string;
+    onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
 export default function Button({
-    text,
+    label,
     color,
     width = 350,
     height = 100,
     textColor = `${colors.white}`,
+    onClick,
 }: ButtonProps) {
     return (
-        <button type="button" role="button">
-            <p>{text}</p>
+        <button
+            type="button"
+            role="button"
+            data-testid="button"
+            onClick={onClick}
+        >
+            <p data-testid="button-label">{label}</p>
             <style jsx>{`
                 button {
                     background-color: ${color};
@@ -35,6 +43,8 @@ export default function Button({
                     color: ${textColor};
                     font-size: 45px;
                     font-weight: bold;
+                    text-decoration: none;
+                    width: 100%;
                 }
             `}</style>
         </button>

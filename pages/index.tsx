@@ -7,12 +7,20 @@ import Botsardo from 'CustomTypes/botsardo.d';
 
 interface AppState {
     botsardos: Array<Botsardo>;
+    loading: boolean;
 }
 
 export default function Home() {
     const [botsardos, setBotsardos] = useState<AppState['botsardos']>([]);
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
-        setBotsardos(INITIAL_DATA);
+        setLoading(true);
+        setTimeout(() => {
+            setBotsardos(INITIAL_DATA);
+            setLoading(false);
+        }, 2000);
+        //simula llamada a api
     }, []);
 
     return (
@@ -22,7 +30,15 @@ export default function Home() {
                 <meta name="description" content="A grid trading bot" />
                 <link rel="icon" href="/botsardo.ico" />
             </Head>
-            <main>{botsardos.length ? <h1>hay bots</h1> : <EmptyState />}</main>
+            <main>
+                {loading ? (
+                    <div>CARGANDO</div>
+                ) : !botsardos.length ? (
+                    <h1>hay bots</h1>
+                ) : (
+                    <EmptyState />
+                )}
+            </main>
             <style jsx global>{`
                 body {
                     background: rgba(32, 59, 100, 0.95);
