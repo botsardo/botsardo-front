@@ -14,9 +14,14 @@ export default function EmptyState() {
 
     return (
         <>
-            <div>
-                <Image src={sad} width={177} height={177} />
-                <p>
+            <div data-testid="empty-state">
+                <Image
+                    data-testid="empty-state-svg"
+                    src={sad}
+                    width={177}
+                    height={177}
+                />
+                <p data-testid="empty-state-text">
                     No tenés ningún <strong>botsardo</strong> activo
                 </p>
                 <Button {...buttonProps} />

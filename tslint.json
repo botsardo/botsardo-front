@@ -1,0 +1,6 @@
+{
+    "no-console": [
+    true,
+    "log"
+]
+}
