@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import EmptyState from 'components/EmptyState';
+import EmptyState from 'components/EmptyState/EmptyState';
 
 describe('Everything is rendered', () => {
     beforeEach(() => {

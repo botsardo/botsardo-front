@@ -37,6 +37,12 @@ export default function Button({
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
+                    position: relative;
+                    transition: border 0.3s;
+                }
+
+                button:hover {
+                    border: 2px solid ${colors.white};
                 }
 
                 button > p {

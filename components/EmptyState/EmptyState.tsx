@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import sad from 'assets/icons/sad.svg';
+import sadIcon from 'assets/icons/sad.svg';
 import { colors } from 'styles/globals';
-import Button from 'components/Button';
+import Button from 'components/Button/Button';
 
 export default function EmptyState() {
     const buttonProps = {
@@ -17,7 +17,7 @@ export default function EmptyState() {
             <div data-testid="empty-state">
                 <Image
                     data-testid="empty-state-svg"
-                    src={sad}
+                    src={sadIcon}
                     width={177}
                     height={177}
                 />
@@ -37,7 +37,6 @@ export default function EmptyState() {
                     }
 
                     div > p {
-                        color: ${colors.white};
                         font-size: 40px;
                         line-height: 48px;
                     }

@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { colors } from 'styles/globals';
 import '@testing-library/jest-dom';
-import Button from 'components/Button';
+import Button from 'components/Button/Button';
 
 const handleClick = () => {
     console.log('testing');
